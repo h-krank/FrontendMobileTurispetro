@@ -8,7 +8,6 @@ export const SugestionText = styled.View`
 export const Category = styled.Text`
     font-size: 14px;
     margin-right: auto;
-    color: yellow;
 `
 
 export const Name = styled.Text`
