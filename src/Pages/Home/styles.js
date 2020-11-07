@@ -16,13 +16,14 @@ export const Header = styled.View`
 
 
 export const Title = styled.Text`
-  font-size: 20px;
-  color: #888;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212529;
 `;
 export const WeatherBox = styled.View`
   flex-direction: row;
   padding: 10px;
-  border: 1px solid #888;
+  border: 1px solid #a2a2a2;
   border-radius: 20px;
 `
 
@@ -51,12 +52,22 @@ export const IconArea = styled.ScrollView`
   flex-direction: row;
   
 `
+export const IconView = styled.View`
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+`
+
 export const Icon = styled.TouchableOpacity`
   align-items: center;
-  margin: 10px;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  border: 1px solid #a2a2a2;
 `
 
 export const IconText = styled.Text`
   color: #D15B49;
-  font-size: 12px;
+  font-size: 10px;
 `

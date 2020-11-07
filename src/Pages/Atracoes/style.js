@@ -10,5 +10,4 @@ export const HeaderText = styled.Text`
     margin-right: auto;
     font-size: 20px;
     color: #959595;
-
 `

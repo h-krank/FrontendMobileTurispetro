@@ -45,13 +45,14 @@ export default ({ navigation }) => {
 
     return (
         <ScrollView style={{ margin: 10 }}>
+            
             <Header>
                 <CloseSVG onPress={() => navigation.goBack()} />
                 <HeaderText>Atrações</HeaderText>
             </Header>
             <Scrollcards data={dataCerveja} title={"Cervejeiro"} navigation={navigation} />
             <Scrollcards data={dataHistorico} title={"Histórico"} navigation={navigation} />
-
+            
 
         </ScrollView>
 
