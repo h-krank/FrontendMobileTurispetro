@@ -6,6 +6,7 @@ import Detalhes from '../Pages/Detalhes'
 import Atracoes from '../Pages/Atracoes'
 import Circuitos from '../Pages/Circuitos'
 import Criancas from '../Pages/Criancas'
+import Eventos from '../Pages/Eventos'
 
 
 const Auth = createStackNavigator();
@@ -43,11 +44,11 @@ const AppRoutes = () => {
                 name="Atracoes"
                 component={Atracoes} />
 
-            {/* <Auth.Screen
+            <Auth.Screen
                 name="Eventos"
                 component={Eventos} />
 
-            <Auth.Screen
+            {/* <Auth.Screen
                 name="Circuitos"
                 component={Circuitos} /> */}
 
