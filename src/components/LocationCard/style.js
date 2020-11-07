@@ -20,8 +20,6 @@ export const Name = styled.Text`
 
 `
 
-export const ImageLocation = styled.ImageBackground`
+export const Card = styled.View`
     border-radius: 20px;
-    height: 220px;
-    width: 180px;
 `

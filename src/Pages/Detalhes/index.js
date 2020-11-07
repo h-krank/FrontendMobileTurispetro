@@ -1,8 +1,12 @@
 import React from 'react'
 import { Text } from 'react-native'
+import { Container, HeaderText } from './style'
 export default ({ route: { params: { data } } }) => {
 
     return (
-        <Text>{data.titulo}</Text>
+        <Container>
+            <HeaderText>{data.titulo}</HeaderText>
+        </Container>
+        
     )
 }

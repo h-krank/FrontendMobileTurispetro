@@ -131,7 +131,7 @@ const Projetos = ({ navigation }) => {
         </IconView>
 
         <IconView>
-          <Icon>
+          <Icon onPress={() => navigation.navigate("Criancas")}>
             <CriancasSVG />
           </Icon>
           <IconText>Para crianças</IconText>
