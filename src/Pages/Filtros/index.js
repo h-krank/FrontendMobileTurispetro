@@ -5,14 +5,14 @@ import { Sugestion, SugestionText, SugestionHeader } from './style'
 import FilterCard from '../../components/FilterCard'
 import CloseSVG from '../../assets/close.svg'
 
-export default ({ route: { params: { title, data }} }) => {
+export default ({ route: { params: { title, data, navigation }} }) => {
     
 
     return (
         <Sugestion>
 
             <SugestionHeader>
-                {/* <CloseSVG onPress={() => navigation.goBack()} /> */}
+                <CloseSVG onPress={() => navigation.goBack()} />
                 <SugestionText>{title}</SugestionText>
             </SugestionHeader>
             

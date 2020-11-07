@@ -94,6 +94,7 @@ const Projetos = ({ navigation }) => {
       <IconArea
         horizontal={true}
         contentContainerStyle={{ alignItems: "flex-end" }}
+        showsHorizontalScrollIndicator={false}
       >
         <IconView>
           <Icon onPress={() => navigation.navigate("Comer")}>
