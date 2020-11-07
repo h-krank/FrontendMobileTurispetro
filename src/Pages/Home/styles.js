@@ -51,7 +51,7 @@ export const IconArea = styled.ScrollView`
   flex-direction: row;
   
 `
-export const Icon = styled.View`
+export const Icon = styled.TouchableOpacity`
   align-items: center;
   margin: 10px;
 `

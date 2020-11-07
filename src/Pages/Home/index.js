@@ -103,7 +103,7 @@ const Projetos = ({ navigation }) => {
         </Icon>
 
 
-        <Icon>
+        <Icon onPress={() => navigation.navigate("Atracoes")}>
           <AtracoesSVG />
           <IconText>Atrações</IconText>
         </Icon>
@@ -131,7 +131,7 @@ const Projetos = ({ navigation }) => {
 
 
       <ScrollCards data={data} title="Sugestões" navigation={navigation} />
-    </Container>
+    </Container >
   )
 }
 
