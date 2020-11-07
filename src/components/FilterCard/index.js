@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-import { Card, Image } from './style'
+import { Card, Image, Categoria, Titulo } from './style'
 
 export default ({ data }) => {
 
@@ -9,8 +9,8 @@ export default ({ data }) => {
         <Card>
             <Image source={{ uri: data.imagem }}></Image>
             <View>
-                <Text>{data.categoria}</Text>
-                <Text>{data.titulo}</Text>
+                <Categoria>{data.categoria}</Categoria>
+                <Titulo>{data.titulo}</Titulo>
 
             </View>
 

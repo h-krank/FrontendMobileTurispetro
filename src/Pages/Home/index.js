@@ -96,14 +96,14 @@ const Projetos = ({ navigation }) => {
         contentContainerStyle={{ alignItems: "flex-end" }}
       >
         <IconView>
-          <Icon>
+          <Icon onPress={() => navigation.navigate("Comer")}>
             <ComidaSVG />
           </Icon>
           <IconText>Onde Comer</IconText>
         </IconView>
 
         <IconView>
-          <Icon>
+          <Icon onPress={() => navigation.navigate("Dormir")}>
             <DormirSVG />
           </Icon>
           <IconText>Onde dormir</IconText>
@@ -117,14 +117,14 @@ const Projetos = ({ navigation }) => {
         </IconView>
 
         <IconView>
-          <Icon>
+          <Icon onPress={() => navigation.navigate("Eventos")}>
             <EventosSVG />
           </Icon>
           <IconText>Eventos</IconText>
         </IconView>
 
         <IconView>
-          <Icon>
+          <Icon onPress={() => navigation.navigate("Circuitos")}>
             <CircuitoSVG />
           </Icon>
           <IconText>Circuitos</IconText>

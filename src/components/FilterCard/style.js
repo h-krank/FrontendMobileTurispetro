@@ -8,9 +8,18 @@ export const Image = styled.Image`
 `
 
 export const Card = styled.View`
-    border: 1px solid #888;
+    border: 1px solid #a2a2a2;
     flex-direction: row;
     border-radius: 20px;
     margin: 20px 10px;
 
+`
+
+export const Categoria = styled.Text`
+    font-size: 12px;
+`
+
+export const Titulo = styled.Text`
+    font-size: 20px;
+    font-weight: 700;
 `

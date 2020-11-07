@@ -4,6 +4,7 @@ import Home from '../Pages/Home'
 import Filtros from '../Pages/Filtros'
 import Detalhes from '../Pages/Detalhes'
 import Atracoes from '../Pages/Atracoes'
+import Circuitos from '../Pages/Circuitos'
 import Criancas from '../Pages/Criancas'
 
 
@@ -28,11 +29,27 @@ const AppRoutes = () => {
 
             <Auth.Screen
                 name="Detalhes"
-                component={Detalhes} />
+                component={Detalhes} />    
+{/* 
+            <Auth.Screen
+                name="Comer"
+                component={Comer} />    
+
+            <Auth.Screen
+                name="Dormir"
+                component={Dormir} /> */}
 
             <Auth.Screen
                 name="Atracoes"
                 component={Atracoes} />
+
+            {/* <Auth.Screen
+                name="Eventos"
+                component={Eventos} />
+
+            <Auth.Screen
+                name="Circuitos"
+                component={Circuitos} /> */}
 
             <Auth.Screen
                 name="Criancas"
