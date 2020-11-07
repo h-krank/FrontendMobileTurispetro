@@ -13,7 +13,7 @@ const AppRoutes = () => {
         <Auth.Navigator
             initialRouteName="Home"
             screenOptions={{
-                headerShown: true
+                headerShown: false
               }}>
 
             <Auth.Screen

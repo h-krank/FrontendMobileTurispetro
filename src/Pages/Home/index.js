@@ -7,6 +7,7 @@ import { View, Text, } from 'react-native'
 
 import {
   Container,
+  Header,
   Title,
   WeatherBox,
   WeatherText,
@@ -19,6 +20,9 @@ import {
 
 } from './styles';
 
+import UserSVG from '../../assets/user.svg'
+import QRCodeSVG from '../../assets/qr-code.svg'
+import LocationSVG from '../../assets/location.svg'
 import SunSVG from '../../assets/sun.svg'
 import SearchSVG from '../../assets/search.svg'
 import ComidaSVG from '../../assets/para-comer.svg'
@@ -63,6 +67,14 @@ const Projetos = ({ navigation }) => {
   return (
     <Container>
 
+      <Header>
+        <UserSVG />
+        <View style={{ flexDirection: "row", marginLeft: "auto"}}>
+          <QRCodeSVG />
+          <LocationSVG style={{marginLeft: 35}}/>
+        </View>
+      </Header>
+
       <WeatherBox>
         <SunSVG />
 
@@ -79,7 +91,7 @@ const Projetos = ({ navigation }) => {
         <SearchSVG style={{ marginLeft: 'auto', marginTop: 50 }} />
       </View>
 
-      <IconArea horizontal={true} contentContainerStyle={{alignItems: 'flex-end'}}>
+      <IconArea horizontal={true} contentContainerStyle={{ alignItems: 'flex-end' }}>
         <Icon>
           <ComidaSVG />
           <IconText>Onde comer</IconText>

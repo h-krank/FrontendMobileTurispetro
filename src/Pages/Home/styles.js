@@ -8,6 +8,13 @@ export const Container = styled.ScrollView`
   
 `;
 
+export const Header = styled.View`
+  margin: 25px 0;
+  flex-direction: row;
+  align-items: center;
+`
+
+
 export const Title = styled.Text`
   font-size: 20px;
   color: #888;
@@ -32,7 +39,7 @@ export const WeatherDetail = styled.Text`
 export const SearchBar = styled.TextInput`
   flex: 1;
   margin-top: 50px;
-  background-color: #ccc;
+  background-color: #DEDEDE;
   border-radius: 20px;
   height: 44px;
   padding-left: 30px;
@@ -40,7 +47,7 @@ export const SearchBar = styled.TextInput`
   width: 100%;
 `
 export const IconArea = styled.ScrollView`
-  margin: 25px;
+  margin: 25px 0px;
   flex-direction: row;
   
 `
