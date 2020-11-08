@@ -31,43 +31,29 @@ import CriancasSVG from "../../assets/para-criancas.svg";
 import EventosSVG from "../../assets/eventos.svg";
 import CircuitoSVG from "../../assets/circuitos";
 
-const data = [
-  {
-    imagem:
-      "http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg",
-    categoria: "Cervejeiro",
-    titulo: "Cervejaria Longe",
-    rating: 3
-  },
-  {
-    imagem:
-      "http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg",
-    categoria: "Cervejeiro",
-    titulo: "Cervejaria Bohemia",
-    rating: 4
-  },
-  {
-    imagem:
-      "http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg",
-    categoria: "Cervejeiro",
-    titulo: "Cervejaria Bohemia",
-    rating: 2
-  },
-];
+import api from '../../services/api'
+
 
 const Projetos = ({ navigation }) => {
   const [weather, setWeather] = useState("");
+  const [data, setData] = useState([])
 
-  const loadWeather = async () => {
+  const loadWeather = useCallback(async () => {
     const results = await axios.get(
       `http://api.openweathermap.org/data/2.5/weather?q=petropolis,br&appid=032e60cbafbe8333f3d6ee9c5a3309b3`
     );
     setWeather(results.data.main);
-  };
+  }, []);
+
+  const loadData = useCallback(async () => {
+    const { data: results } = await api.get('atracoes')
+    setData(results)
+  }, [])
 
   useEffect(() => {
     loadWeather();
-  }, []);
+    loadData();
+  }, [loadWeather, loadData]);
 
   return (
     <Container>
@@ -100,14 +86,14 @@ const Projetos = ({ navigation }) => {
         showsHorizontalScrollIndicator={false}
       >
         <IconView>
-          <Icon onPress={() => navigation.navigate("Comer")}>
+          <Icon onPress={() => 'navigation.navigate("Comer")'}>
             <ComidaSVG />
           </Icon>
           <IconText>Onde Comer</IconText>
         </IconView>
 
         <IconView>
-          <Icon onPress={() => navigation.navigate("Dormir")}>
+          <Icon onPress={() => 'navigation.navigate("Dormir")'}>
             <DormirSVG />
           </Icon>
           <IconText>Onde dormir</IconText>
@@ -128,7 +114,7 @@ const Projetos = ({ navigation }) => {
         </IconView>
 
         <IconView>
-          <Icon onPress={() => navigation.navigate("Circuitos")}>
+          <Icon onPress={() => 'navigation.navigate("Circuitos")'}>
             <CircuitoSVG />
           </Icon>
           <IconText>Circuitos</IconText>

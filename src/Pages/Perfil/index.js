@@ -33,7 +33,7 @@ const Perfil = ({navigation}) => {
                     <Saida/>
                     
                     </Header>
-                    <User style={{marginLeft: "auto", marginRight: "auto", width: 300, height: 300 }}/>
+                    <User width={151} height={151} style={{marginLeft: "auto", marginRight: "auto", width: 300, height: 300 }}/>
             </ContainerTop>
 
             <ContainerBottom>

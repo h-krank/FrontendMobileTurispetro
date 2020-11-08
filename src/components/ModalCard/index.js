@@ -23,7 +23,7 @@ export default ({ data, navigation }) => {
     }
 
     return (
-        <Container>
+        <Container onPress={()=> navigation.navigate("Detalhes", {data})}>
 
             <Image style={{ width: 100, height: 100 }} source={{ uri: imagem }} />
             <Content>

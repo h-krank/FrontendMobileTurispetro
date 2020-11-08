@@ -12,10 +12,12 @@ export default ({ data, navigation }) => {
                 return '#FF296A'
             case "Cervejeiro":
                 return '#FFDB29'
-            case "Religiosa":
+            case "Religioso":
                 return '#29A2FF'
             case "Ecológica":
                 return '#5DD183'
+            default:
+                return '#fff'
         }
     }
 

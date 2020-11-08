@@ -1,18 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { View, Image, Text, Button } from 'react-native'
 import MapView, { Marker } from 'react-native-maps';
 import HistoricoSVG from '../../assets/mapa-historico.svg'
 import CervejaSVG from '../../assets/cervejeiras.svg'
 import RestauranteSVG from '../../assets/mapa-restaurante.svg'
 import DormirSVG from '../../assets/mapa-dormir.svg'
+import ReligiosoSVG from '../../assets/religiosas.svg'
 
 import Animated from 'react-native-reanimated';
 import BottomSheet from 'reanimated-bottom-sheet';
 import Card from '../../components/ModalCard'
 
+import api from '../../services/api'
+
 
 export default ({ navigation }) => {
     const [current, setCurrent] = useState({})
+    const [data, setData] = useState([])
+
+    const loadData = useCallback(async () => {
+        const { data: response } = await api.get('atracoes')
+        setData(response)
+    }, [])
+
+    useEffect(() => {
+        loadData()
+    }, [loadData])
 
     const renderContent = () => (
         <View
@@ -36,46 +49,10 @@ export default ({ navigation }) => {
                 return <HistoricoSVG />
             case "Dormir":
                 return <DormirSVG />
+            case "Religioso":
+                return <ReligiosoSVG />
         }
     }
-
-    const data = [
-        {
-            imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg',
-            categoria: 'Cervejeiro',
-            titulo: 'Cervejaria Bohemia',
-            endereco: 'R. Alfredo Pachá, 166',
-            telefones: '1234567',
-            descricao: 'Lorem ipsum',
-            latitude: -22.5063572,
-            longitude: -43.184878,
-            rating: 3,
-        },
-        {
-            imagem: 'https://www.infoescola.com/wp-content/uploads/2011/07/Pal%C3%A1cio-Imperial-Petr%C3%B3polis_560959816-1000x667.jpg',
-            categoria: 'Histórico',
-            titulo: 'Museu Imperial',
-            endereco: 'Rua da Imperatriz',
-            telefones: '2345678',
-            descricao: "Lorem ipsum",
-            latitude: -22.5080779,
-            longitude: -43.1757655,
-            rating: 4,
-
-        },
-        {
-            imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg',
-            categoria: 'Dormir',
-            titulo: 'Dormitório Imperial',
-            endereco: 'Rua da Imperatriz',
-            telefones: '2345678',
-            descricao: "Lorem ipsum",
-            latitude: -22.5051119,
-            longitude: -43.1835593,
-            rating: 5,
-
-        },
-    ]
 
     return (
         <>

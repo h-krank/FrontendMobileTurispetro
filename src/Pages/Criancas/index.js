@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Text, ScrollView } from 'react-native'
 import Scrollcards from '../../components/SidescrollCards'
 import { Header, HeaderText, CardsView } from './style'
@@ -6,55 +6,32 @@ import CloseSVG from '../../assets/close.svg'
 import HistoricoSVG from '../../assets/historicas.svg'
 import ReligiosaSVG from '../../assets/religiosas.svg'
 
+import api from '../../services/api'
+
 export default ({ navigation }) => {
+    const [dataCerveja, setDataCerveja] = useState([])
+    const [dataHistorico, setDataHistorico] = useState([])
+    const [dataReligioso, setDataReligioso] = useState([])
+    const [dataEco, setDataEco] = useState([])
 
-    const dataReligioso = [
-        {
-            imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2013/04/catedral-pedro-alcantara-petropolis-frente-t.jpg',
-            categoria: 'Religiosa',
-            titulo: 'Catedral Petrópolis',
-            rating: 5,
-        },
-        {
-            imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2013/04/catedral-pedro-alcantara-petropolis-frente-t.jpg',
-            categoria: 'Religiosa',
-            titulo: 'Catedral Petrópolis',
-            rating: 4,
+    const loadData = useCallback(async () => {
+        const { data: cerveja } = await api.get('atracoes?categoria=Cervejeiro&criancas=true')
+        const { data: historico } = await api.get('atracoes?categoria=Histórico&criancas=true')
+        const { data: religioso } = await api.get('atracoes?categoria=Religioso&criancas=true')
+        const { data: eco } = await api.get('atracoes?categoria=Eco&criancas=true')
+        setDataCerveja(cerveja)
+        setDataHistorico(historico)
+        setDataReligioso(religioso)
+        setDataEco(eco)
+        console.log(cerveja, historico, religioso, eco)
 
-        },
-        {
-            imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2013/04/catedral-pedro-alcantara-petropolis-frente-t.jpg',
-            categoria: 'Religiosa',
-            titulo: 'Catedral Petrópolis',
-            rating: 4,
 
-        }
+    }, [])
 
-    ]
+    useEffect(() => {
+        loadData()
+    }, [loadData])
 
-    const dataHistorico = [
-        {
-            imagem: 'https://www.infoescola.com/wp-content/uploads/2011/07/Pal%C3%A1cio-Imperial-Petr%C3%B3polis_560959816-1000x667.jpg',
-            categoria: 'Histórico',
-            titulo: 'Museu Imperial',
-            rating: 3,
-
-        },
-        {
-            imagem: 'https://www.infoescola.com/wp-content/uploads/2011/07/Pal%C3%A1cio-Imperial-Petr%C3%B3polis_560959816-1000x667.jpg',
-            categoria: 'Histórico',
-            titulo: 'Museu Imperial',
-            rating: 5,
-
-        },
-        {
-            imagem: 'https://www.infoescola.com/wp-content/uploads/2011/07/Pal%C3%A1cio-Imperial-Petr%C3%B3polis_560959816-1000x667.jpg',
-            categoria: 'Histórico',
-            titulo: 'Museu Imperial',
-            rating: 4,
-
-        },
-    ]
 
     return (
         <ScrollView style={{ margin: 10 }}>
@@ -63,12 +40,22 @@ export default ({ navigation }) => {
                 <CloseSVG onPress={() => navigation.goBack()} />
                 <HeaderText>Para Crianças</HeaderText>
             </Header>
-            <CardsView>
-                <Scrollcards data={dataReligioso} title={"Religiosa"} navigation={navigation} icon={<ReligiosaSVG />} />
-            </CardsView>
-            <CardsView>
-                <Scrollcards data={dataHistorico} title={"Histórico"} navigation={navigation} icon={<HistoricoSVG />} />
-            </CardsView>
+            {!!dataHistorico.length &&
+                <CardsView>
+                    <Scrollcards data={dataHistorico} title={"Históricas"} navigation={navigation} icon={<HistoricoSVG />} />
+                </CardsView>}
+            {!!dataCerveja.length &&
+                <CardsView>
+                    <Scrollcards data={dataCerveja} title={"Cervejarias"} navigation={navigation} icon={<CervejaSVG />} />
+                </CardsView>}
+            {!!dataReligioso.length &&
+                <CardsView>
+                    <Scrollcards data={dataReligioso} title={"Religioso"} navigation={navigation} icon={<ReligiosoSVG />} />
+                </CardsView>}
+            {!!dataEco.length &&
+                <CardsView>
+                    <Scrollcards data={dataEco} title={"Históricas"} navigation={navigation} icon={<HistoricoSVG />} />
+                </CardsView>}
 
 
         </ScrollView>
