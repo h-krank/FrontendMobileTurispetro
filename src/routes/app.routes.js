@@ -6,6 +6,7 @@ import Detalhes from '../Pages/Detalhes'
 import Atracoes from '../Pages/Atracoes'
 import Circuitos from '../Pages/Circuitos'
 import Criancas from '../Pages/Criancas'
+import Mapa from '../Pages/Mapa'
 
 
 const Auth = createStackNavigator();
@@ -29,11 +30,11 @@ const AppRoutes = () => {
 
             <Auth.Screen
                 name="Detalhes"
-                component={Detalhes} />    
+                component={Detalhes} />
 {/* 
             <Auth.Screen
                 name="Comer"
-                component={Comer} />    
+                component={Comer} />
 
             <Auth.Screen
                 name="Dormir"
@@ -54,6 +55,12 @@ const AppRoutes = () => {
             <Auth.Screen
                 name="Criancas"
                 component={Criancas} />
+
+
+            <Auth.Screen
+                name="Mapa"
+                component={Mapa} />
+
 
         </Auth.Navigator>
     )

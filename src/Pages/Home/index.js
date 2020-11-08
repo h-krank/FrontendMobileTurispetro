@@ -72,7 +72,7 @@ const Projetos = ({ navigation }) => {
         <UserSVG />
         <View style={{ flexDirection: "row", marginLeft: "auto" }}>
           <QRCodeSVG />
-          <LocationSVG style={{ marginLeft: 35 }} />
+          <LocationSVG style={{ marginLeft: 35 }} onPress={() => navigation.navigate("Mapa")}/>
         </View>
       </Header>
 
