@@ -8,6 +8,7 @@ import Circuitos from '../Pages/Circuitos'
 import Criancas from '../Pages/Criancas'
 import Mapa from '../Pages/Mapa'
 import Eventos from '../Pages/Eventos'
+import Perfil from '../Pages/Perfil'
 
 
 const Auth = createStackNavigator();
@@ -32,7 +33,7 @@ const AppRoutes = () => {
             <Auth.Screen
                 name="Detalhes"
                 component={Detalhes} />
-{/* 
+            {/* 
             <Auth.Screen
                 name="Comer"
                 component={Comer} />
@@ -61,6 +62,10 @@ const AppRoutes = () => {
             <Auth.Screen
                 name="Mapa"
                 component={Mapa} />
+
+            <Auth.Screen
+                name="Perfil"
+                component={Perfil} />
 
 
         </Auth.Navigator>

@@ -69,10 +69,10 @@ const Projetos = ({ navigation }) => {
   return (
     <Container>
       <Header>
-        <UserSVG />
+        <UserSVG onPress={() => navigation.navigate("Perfil")} />
         <View style={{ flexDirection: "row", marginLeft: "auto" }}>
           <QRCodeSVG />
-          <LocationSVG style={{ marginLeft: 35 }} onPress={() => navigation.navigate("Mapa")}/>
+          <LocationSVG style={{ marginLeft: 35 }} onPress={() => navigation.navigate("Mapa")} />
         </View>
       </Header>
 
@@ -112,7 +112,7 @@ const Projetos = ({ navigation }) => {
 
         <IconView>
           <Icon onPress={() => navigation.navigate("Atracoes")}>
-            <AtracoesSVG />
+            <AtracoesSVG size={300} />
           </Icon>
           <IconText>Atrações</IconText>
         </IconView>

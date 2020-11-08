@@ -10,7 +10,7 @@ import {
   } from "./styles";
   
   import FundoLogin from "../../assets/FundoLogin.png";
-  import BrasaoPetropolis from "../../assets/BrasaoPetropolis.png";
+//   import BrasaoPetropolis from "../../assets/BrasaoPetropolis.png";
 
 export default Login => {
 
