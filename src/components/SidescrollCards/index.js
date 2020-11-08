@@ -3,7 +3,7 @@ import { ScrollView, Text } from 'react-native'
 import { Title, NavigateCategory } from './style'
 import Card from '../LocationCard'
 
-export default ({ data, title, navigation, icon }) => {
+export default ({ data, title, navigation, icon}) => {
 
     return (
         <>
