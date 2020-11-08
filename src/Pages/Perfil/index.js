@@ -7,7 +7,11 @@ import {
     BoxButton,
     Button,
     ButtonText,
-    Header
+    Header,
+    BoxUsuario,
+    NomeUsuario,
+    CompleteCadastro,
+    Menu,
   } from "./styles";
 
 import AtracoesFavoritas from "../../assets/atracoes-favoritas.svg";
@@ -23,21 +27,27 @@ import Voltar from "../../assets/voltar.svg";
 import MeuPerfil from "../../assets/meu-perfil.svg";
 import User from "../../assets/user.svg";
 
-const Perfil = ({navigation}) => {
+const Perfil = () => {
     return (
         <Container>
             <ContainerTop>
-                    <Header>
-                    <Voltar onPress={() => navigation.goBack()}/>
-                    
+                <Header>
+                    <Voltar/>
                     <Saida/>
-                    
-                    </Header>
-                    <User width={151} height={151} style={{marginLeft: "auto", marginRight: "auto", width: 300, height: 300 }}/>
+                </Header>
+
+                <BoxUsuario>
+                    <User width = {151} height = {151} style ={{justifyContent: 'center', marginRight:'auto', marginLeft:'auto'}}/>
+                    <NomeUsuario>Carolina Vieira</NomeUsuario>
+
+                    <CompleteCadastro>Complete seu cadastro e ganhe recompensas!</CompleteCadastro>
+                    <Menu>MENU</Menu>
+                </BoxUsuario>
+
             </ContainerTop>
 
             <ContainerBottom>
-                <BoxButton>                    
+                <BoxButton>
                     <MeuPerfil/>
                     <Button>
                         <ButtonText>Meu Perfil</ButtonText>
@@ -48,6 +58,7 @@ const Perfil = ({navigation}) => {
                     <Button>
                         <ButtonText>Notificações</ButtonText>
                     </Button>
+                    <NumeroNotificacoes/>
                 </BoxButton>
                 <BoxButton>
                     <AtracoesFavoritas/>
@@ -66,6 +77,7 @@ const Perfil = ({navigation}) => {
                     <Button>
                         <ButtonText>Locais Visitados</ButtonText>
                     </Button>
+                    <Interrrogacao/>
                 </BoxButton>
                 <BoxButton>
                     <Recompensas/>
