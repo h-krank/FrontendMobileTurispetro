@@ -48,7 +48,8 @@ export default ({ navigation }) => {
             telefones: '1234567',
             descricao: 'Lorem ipsum',
             latitude: -22.5063572,
-            longitude: -43.184878
+            longitude: -43.184878,
+            rating: 3,
         },
         {
             imagem: 'https://www.infoescola.com/wp-content/uploads/2011/07/Pal%C3%A1cio-Imperial-Petr%C3%B3polis_560959816-1000x667.jpg',
@@ -58,7 +59,9 @@ export default ({ navigation }) => {
             telefones: '2345678',
             descricao: "Lorem ipsum",
             latitude: -22.5080779,
-            longitude: -43.1757655
+            longitude: -43.1757655,
+            rating: 4,
+
         },
         {
             imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg',
@@ -68,7 +71,8 @@ export default ({ navigation }) => {
             telefones: '2345678',
             descricao: "Lorem ipsum",
             latitude: -22.5051119,
-            longitude: -43.1835593
+            longitude: -43.1835593,
+            rating: 5,
 
         },
     ]

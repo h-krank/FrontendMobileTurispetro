@@ -1,6 +1,8 @@
 import React from 'react'
 import { Text, ImageBackground, View, TouchableOpacity } from 'react-native'
 import { Name, Category, Card } from './style'
+import StarRating from 'react-native-star-rating';
+
 
 export default ({ data, navigation }) => {
 
@@ -31,9 +33,19 @@ export default ({ data, navigation }) => {
                         width: 180
                     }} source={{ uri: data.imagem }}>
 
-                    <View style={{ position: 'absolute', top: 0, left: 0, bottom: 0, justifyContent: 'flex-end', alignItems: 'center' }}>
+                    <View style={{ position: 'absolute', top: 0, left: 5, bottom: 5, justifyContent: 'flex-end', alignItems: 'center' }}>
                         <Category style={{ color: getColor(data.categoria) }}>{data.categoria}</Category>
                         <Name>{data.titulo}</Name>
+                        <StarRating
+                            containerStyle={{marginRight: 'auto'}}
+                            disabled={true}
+                            maxStars={5}
+                            rating={data.rating}
+                            emptyStarColor="white"
+                            fullStarColor="orange"
+                            starSize={16}
+                            
+                        />
                     </View>
 
                 </ImageBackground>

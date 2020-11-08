@@ -13,17 +13,20 @@ export default ({ navigation }) => {
             imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg',
             categoria: 'Cervejeiro',
             titulo: 'Cervejaria Longe',
+            rating: 1,
 
         },
         {
             imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg',
             categoria: 'Cervejeiro',
-            titulo: 'Cervejaria Bohemia'
+            titulo: 'Cervejaria Bohemia',
+            rating: 4,
         },
         {
             imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg',
             categoria: 'Cervejeiro',
-            titulo: 'Cervejaria Bohemia'
+            titulo: 'Cervejaria Bohemia',
+            rating: 2,
         }
 
     ]
@@ -35,17 +38,20 @@ export default ({ navigation }) => {
             titulo: 'Museu Imperial',
             endereco: 'Rua da Imperatriz',
             telefones: '2345678',
-            descricao: "Meus parente mora lá"
+            descricao: "Museu Imperial",
+            rating: 5,
         },
         {
             imagem: 'https://www.infoescola.com/wp-content/uploads/2011/07/Pal%C3%A1cio-Imperial-Petr%C3%B3polis_560959816-1000x667.jpg',
             categoria: 'Histórico',
-            titulo: 'Museu Imperial'
+            titulo: 'Museu Imperial',
+            rating: 2,
         },
         {
             imagem: 'https://www.infoescola.com/wp-content/uploads/2011/07/Pal%C3%A1cio-Imperial-Petr%C3%B3polis_560959816-1000x667.jpg',
             categoria: 'Histórico',
-            titulo: 'Museu Imperial'
+            titulo: 'Museu Imperial',
+            rating: 4,
         },
     ]
 
@@ -58,7 +64,7 @@ export default ({ navigation }) => {
                 <HeaderText>Atrações</HeaderText>
             </Header>
             <CardsView>
-                <Scrollcards data={dataHistorico} title={"Históricas"} navigation={navigation} icon={<HistoricoSVG />}/>
+                <Scrollcards data={dataHistorico} title={"Históricas"} navigation={navigation} icon={<HistoricoSVG />} />
             </CardsView>
             <CardsView>
                 <Scrollcards data={dataCerveja} title={"Cervejarias"} navigation={navigation} icon={<CervejaSVG />} />

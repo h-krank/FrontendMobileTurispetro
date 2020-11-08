@@ -37,18 +37,21 @@ const data = [
       "http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg",
     categoria: "Cervejeiro",
     titulo: "Cervejaria Longe",
+    rating: 3
   },
   {
     imagem:
       "http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg",
     categoria: "Cervejeiro",
     titulo: "Cervejaria Bohemia",
+    rating: 4
   },
   {
     imagem:
       "http://www.viagenseandancas.com.br/wp-content/uploads/2012/04/fachada-bohemia-petropolis-rj.jpg",
     categoria: "Cervejeiro",
     titulo: "Cervejaria Bohemia",
+    rating: 2
   },
 ];
 

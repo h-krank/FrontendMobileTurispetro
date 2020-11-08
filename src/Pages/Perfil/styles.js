@@ -20,7 +20,7 @@ export const Header = styled.View`
   
 export const ImagemPerfil = styled.TouchableOpacity`
   border-radius: 100;
-  heigth: 50px;
+  height: 50px;
   width: 50px;
 `;
 export const BoxButton = styled.View`  

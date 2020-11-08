@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, View, Image } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { Container, Content, Name, Category, Card } from './style'
-
+import StarRating from 'react-native-star-rating';
 
 export default ({ data, navigation }) => {
     const imagem = data.imagem || null
@@ -29,6 +29,16 @@ export default ({ data, navigation }) => {
             <Content>
                 <Category style={{ color: getColor(data.categoria) }}>{data.categoria}</Category>
                 <Name>{data.titulo}</Name>
+                <StarRating
+                    containerStyle={{ marginRight: 'auto' }}
+                    disabled={true}
+                    maxStars={5}
+                    rating={data.rating}
+                    emptyStarColor="#888"
+                    fullStarColor="orange"
+                    starSize={16}
+
+                />
 
             </Content>
         </Container>
