@@ -4,6 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 import { Sugestion, SugestionText, SugestionHeader } from './style'
 import FilterCard from '../../components/FilterCard'
 import CloseSVG from '../../assets/close.svg'
+import FiltroSVG from '../../assets/filtro.svg';
 
 export default ({ route: { params: { title, data, navigation }} }) => {
     
@@ -14,6 +15,7 @@ export default ({ route: { params: { title, data, navigation }} }) => {
             <SugestionHeader>
                 <CloseSVG onPress={() => navigation.goBack()} />
                 <SugestionText>{title}</SugestionText>
+                <FiltroSVG />
             </SugestionHeader>
             
             {data.map(item =>

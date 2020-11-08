@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { View, Text } from 'react-native'
 
-import { Card, Image, Categoria, Titulo } from './style'
+import { Card, Image, Categoria, Titulo, Descricao } from './style'
 
 import HistoricoSVG from '../../assets/historicas.svg'
 import CervejaSVG from '../../assets/cervejeiras.svg'
@@ -28,11 +28,17 @@ export default ({ data, categoryIcon }) => {
     return (
         <Card>
             <Image source={{ uri: data.imagem }}></Image>
-            <View>
-                <Categoria style={{ color: styleData.color }}>{data.categoria}</Categoria>
-                <Titulo>{data.titulo}</Titulo>
-                {styleData.icon}
-            </View>
+            <Descricao>
+                <View>
+                    <Categoria style={{ color: styleData.color }}>{data.categoria}</Categoria>
+                    <Titulo>{data.titulo}</Titulo>
+                </View>
+                <View>
+                    {styleData.icon}
+                </View>
+                
+            </Descricao>
+            
 
         </Card>
     )

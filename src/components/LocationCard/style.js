@@ -1,9 +1,9 @@
 import styled from 'styled-components/native'
 
-export const SugestionText = styled.View`
-    position: absolute;
+// export const SugestionText = styled.View`
+//     position: absolute;
 
-`
+// `
 
 export const Category = styled.Text`
     font-size: 14px;

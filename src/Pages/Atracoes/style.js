@@ -12,3 +12,8 @@ export const HeaderText = styled.Text`
     font-weight: 700;
     color: #959595;
 `
+export const CardsView = styled.View`
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 20px;
+`

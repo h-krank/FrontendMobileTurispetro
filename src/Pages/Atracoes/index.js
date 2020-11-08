@@ -1,9 +1,8 @@
 import React from 'react'
 import { Text, ScrollView } from 'react-native'
 import Scrollcards from '../../components/SidescrollCards'
-import { Header, HeaderText } from './style'
+import { Header, HeaderText, CardsView } from './style'
 import CloseSVG from '../../assets/close.svg'
-
 import HistoricoSVG from '../../assets/historicas.svg'
 import CervejaSVG from '../../assets/cervejeiras.svg'
 
@@ -58,11 +57,12 @@ export default ({ navigation }) => {
                 <CloseSVG onPress={() => navigation.goBack()} />
                 <HeaderText>Atrações</HeaderText>
             </Header>
-            
-            <Scrollcards data={dataHistorico} title={"Históricas"} navigation={navigation} icon={<HistoricoSVG/>}/>
-            <Scrollcards data={dataCerveja} title={"Cervejarias"} navigation={navigation} icon={<CervejaSVG />} />
-
-
+            <CardsView>
+                <Scrollcards data={dataHistorico} title={"Históricas"} navigation={navigation} icon={<HistoricoSVG />}/>
+            </CardsView>
+            <CardsView>
+                <Scrollcards data={dataCerveja} title={"Cervejarias"} navigation={navigation} icon={<CervejaSVG />} />
+            </CardsView>
 
         </ScrollView>
 

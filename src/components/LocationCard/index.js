@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, ImageBackground, View, TouchableOpacity } from 'react-native'
-import { SugestionText, Name, Category, Card } from './style'
+import { Name, Category, Card } from './style'
 
 export default ({ data, navigation }) => {
 

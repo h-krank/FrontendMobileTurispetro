@@ -20,6 +20,12 @@ export const Categoria = styled.Text`
 `
 
 export const Titulo = styled.Text`
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
+`
+
+export const Descricao = styled.View`
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
 `

@@ -1,25 +1,27 @@
 import React from 'react'
 import { Text, ScrollView } from 'react-native'
 import Scrollcards from '../../components/SidescrollCards'
-import { Header, HeaderText } from './style'
+import { Header, HeaderText, CardsView } from './style'
 import CloseSVG from '../../assets/close.svg'
+import HistoricoSVG from '../../assets/historicas.svg'
+import ReligiosaSVG from '../../assets/religiosas.svg'
 
 export default ({ navigation }) => {
 
     const dataReligioso = [
         {
             imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2013/04/catedral-pedro-alcantara-petropolis-frente-t.jpg',
-            categoria: 'Religioso',
+            categoria: 'Religiosa',
             titulo: 'Catedral Petrópolis'
         },
         {
             imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2013/04/catedral-pedro-alcantara-petropolis-frente-t.jpg',
-            categoria: 'Religioso',
+            categoria: 'Religiosa',
             titulo: 'Catedral Petrópolis'
         },
         {
             imagem: 'http://www.viagenseandancas.com.br/wp-content/uploads/2013/04/catedral-pedro-alcantara-petropolis-frente-t.jpg',
-            categoria: 'Religioso',
+            categoria: 'Religiosa',
             titulo: 'Catedral Petrópolis'
         }
 
@@ -50,8 +52,12 @@ export default ({ navigation }) => {
                 <CloseSVG onPress={() => navigation.goBack()} />
                 <HeaderText>Para Crianças</HeaderText>
             </Header>
-            <Scrollcards data={dataReligioso} title={"Religioso"} navigation={navigation} />
-            <Scrollcards data={dataHistorico} title={"Histórico"} navigation={navigation} />
+            <CardsView>
+                <Scrollcards data={dataReligioso} title={"Religiosa"} navigation={navigation} icon={<ReligiosaSVG />} />
+            </CardsView>
+            <CardsView>
+                <Scrollcards data={dataHistorico} title={"Histórico"} navigation={navigation} icon={<HistoricoSVG />} />
+            </CardsView>
             
 
         </ScrollView>
